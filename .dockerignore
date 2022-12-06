@@ -1,0 +1,11 @@
+**/node_modules
+**/build
+**/venv
+client
+.vscode
+.pytest_cache
+.coverage
+**/*.egg-info
+.cache
+**/__pycache__
+**/*.db

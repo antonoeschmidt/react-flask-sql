@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  client:
+    container_name: client
+    build:
+      context: ./client
+      args:
+        - REACT_APP_BACKEND=${REACT_APP_BACKEND}
+    ports:
+      - 3000:3000
+
+  api:
+    container_name: api
+    build:
+      context: ./api
+      args:
+        - DATABASE_FILE=${DATABASE_FILE}
+        - ROOT_DIR=${ROOT_DIR}
+        - TABLE_NAME=${TABLE_NAME}
+    ports:
+      - 5000:5000
+    environment:
+      - DATABASE_FILE=${DATABASE_FILE}

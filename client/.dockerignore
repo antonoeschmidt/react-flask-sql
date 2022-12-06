@@ -1,0 +1,8 @@
+**/node_modules
+**/build
+.venv
+.vscode
+.pytest_cache
+.coverage
+**/*.egg-info
+.cache
